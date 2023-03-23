@@ -1,0 +1,15 @@
+# read_Q   (For Liftbody with Mach 6)(x=700)
+# nx    ny    nz    
+  4350    2001   161
+# xx1   yy1    zz1    
+  1344    1001   1
+# xx2   yy2    zz2  
+  4350    2001   161
+# filename  
+  "Q_0_down.plt"
+#Mesh_name
+  "OCFD3d-Mesh.dat"
+#data_name
+  "Q.dat"
+#cfddata_name
+  "opencfd.dat"

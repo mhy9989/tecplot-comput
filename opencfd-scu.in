@@ -1,0 +1,41 @@
+# OpenCFD-300P Ver 0.04 input file   (For   Liftbody with Mach 6)
+# nx    ny    nz    
+  4350    2001   161
+# npx0    npy0    npz0    LAP    MSG_BLOCK_SIZE Stream Test
+   10       6      4       4          0           1     0
+# IPeriodic(1:3) 
+   0    0    0   
+# Jacbound(1:3) D0_bound(1:3)
+  1    0    1    1    0    1
+# Non-Reflection i-, i+, j-, j+, k-, k+
+   0    1    0     0     0     0
+# Scheme_invis   Scheme_viscous
+  OMP6_HR          CD6  
+# Re         Ama     gamma      Pr       T_Ref      epsl_SW 
+  10000.     6.0       1.40         0.70       79.          0.01                  
+# dt      end_time   kstep_show  Kstep_save  , Init_stat(0:don't read; 1:read)
+  0.01        5000            100             10000               1
+# IBC  nk   nr  IF_symmetry  IF_withleading   Iflag_upperboundary    AoA  Tw     epsl_wall epsl_upper  wall_dis_begin wall_dis_end  //(liftbody)
+  124   3    6       1              0                 1               0.  3.797     0.02        0.          50.           60. 
+# NFilter
+   1
+#Filter1 nstep_filter Filter_X Filter_Y Filter_Z   ib     ie     jb  je    kb  ke     Filter_scheme   s0    rth
+           10     1      0      0     1000   4349    1   2001    2  160     2          1.0   1.e-5
+# N_ana
+   1
+# Ian  Kstep_ana1 nk nr    IF_Statistics_init  
+   100     50      1   0      1
+   103      1      0      0
+   #107		20		6		0		    1280   	2560		0		484		0		50
+   #103      1      0      0
+   
+   #105      10         18         0       16      1      896    1152    1408    1664    1920    2176    2432    2688    2944    3200    3456    3712    3968    4480    5120   5760
+   #106      10          4         0        2      1     0   2900    
+
+
+
+#*****************************************************************************************************
+
+# IBC  nk   nr  mzmax  mtmax   Inlet_boundary    If_wall_not_normal  Tw     epsl   x_dis_begin  x_dis_end  beta  x_wall_begin  x_up_bound_begin
+  #108   4    7   10      5           1            0                  2.84   0.2     -320.        -300      0.1    -600.         -50.
+
